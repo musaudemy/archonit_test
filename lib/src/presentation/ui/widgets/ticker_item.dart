@@ -3,10 +3,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class TickerItem extends StatelessWidget {
-  const TickerItem({required this.ticker, required this.cost, super.key});
+  const TickerItem({required this.ticker, required this.price, super.key});
 
   final String ticker;
-  final String cost;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -30,20 +30,22 @@ class TickerItem extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 16, top: 16, bottom: 16),
                   child: Text(
                     ticker,
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 17,
-                        fontFamily: 'Roboto'),
+                        color: Color(int.parse('FF17171A', radix: 16)),
+                        fontFamily: 'SFPro'),
                   ),
                 )
               ],
             ),
             Text(
-              cost,
-              style: const TextStyle(
+              price,
+              style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 17,
-                  fontFamily: 'Roboto'),
+                  color: Color(int.parse('FF17171A', radix: 16)),
+                  fontFamily: 'SFPro'),
             ),
           ],
         ));

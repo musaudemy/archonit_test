@@ -1,0 +1,4 @@
+enum ProcessState {
+  busy,
+  idle,
+}
